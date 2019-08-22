@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Observers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Classes</th>
+      <th>Processando</th>
+      <th>Processado</th>
+      <th>Status</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @observers.each do |observer| %>
+      <tr>
+        <td><%= observer.id %></td>
+        <td><%= observer.class_list %></td>
+        <td><%= observer.processes_count %></td>
+        <td><%= observer.processed_count %></td>
+        <td><%= observer.status %></td>
+        <td><%= observer.date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
